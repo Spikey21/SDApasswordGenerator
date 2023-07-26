@@ -1,0 +1,19 @@
+<h1>HOME</h1>
+
+<form method="post" action="{% url 'password' %}"> 
+                <select name="dlugosc" id="dlugosc" required>
+                    <option value="" selected disabled>Wybierz długosc</option>
+                    <option value="value1">5</option>
+                    <option value="value2">8</option>
+                    <option value="value3">10</option>
+                </select>
+
+                <input type="checkbox" name="checkbox1" >znaki specjalne
+
+                <input type="checkbox" name="checkbox2" >liczby
+
+                <input type="checkbox" name="checkbox3" >wielkie liery
+
+                {% csrf_token %}
+                <input type="submit" value="Wyślij" />
+</form>
